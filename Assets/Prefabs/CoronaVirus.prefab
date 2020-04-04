@@ -5114,7 +5114,7 @@ GameObject:
   - component: {fileID: 3191792383567019847}
   - component: {fileID: 3191792383567019846}
   - component: {fileID: 3191792383567019865}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: InfectionZone
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -13225,7 +13225,7 @@ GameObject:
   - component: {fileID: 7269058074501158348}
   - component: {fileID: 7269058074501158351}
   m_Layer: 0
-  m_Name: Sphere
+  m_Name: CoronaSphere
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
