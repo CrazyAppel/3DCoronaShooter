@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 5957548000739313064}
   - component: {fileID: 4156907450327023060}
   - component: {fileID: 1115020246759903324}
+  - component: {fileID: 6187239961210426902}
   m_Layer: 0
   m_Name: Bottle_1
   m_TagString: Untagged
@@ -109,3 +110,15 @@ CapsuleCollider:
   m_Height: 0.35
   m_Direction: 1
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!122 &6187239961210426902
+Halo:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5373252143836164468}
+  m_Enabled: 1
+  m_Color:
+    serializedVersion: 2
+    rgba: 4284172800
+  m_Size: 5
