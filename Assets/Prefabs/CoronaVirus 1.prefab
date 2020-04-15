@@ -1276,6 +1276,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   infectionRadiusSpeed: 0.004
+  infectionSound: {fileID: 8300000, guid: b50ccef8c2a158b479930df6ba71b6a5, type: 3}
   zone: {fileID: 2042482146180513721, guid: 87ad3bae85258c84e81248949d82f4cc, type: 3}
 --- !u!1 &1066751154434675511
 GameObject:

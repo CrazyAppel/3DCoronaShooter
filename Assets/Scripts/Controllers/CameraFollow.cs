@@ -56,7 +56,7 @@ public class CameraFollow : MonoBehaviour
         transform.rotation = localRotation;
         Player.rotation = Quaternion.Euler(0, rotY, 0);
 
-
+        
     }
 
     void LateUpdate()
@@ -69,11 +69,12 @@ public class CameraFollow : MonoBehaviour
         //set the target object to follow
 
         Transform target = CameraFollowObj.transform;
+        
 
         //move towards the game object that is the target
 
         float step = CameraMoveSpeed * Time.deltaTime;
-
+        
         transform.position = Vector3.MoveTowards(transform.position, target.position, step);
 
     }

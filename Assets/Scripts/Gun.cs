@@ -5,11 +5,12 @@ public class Gun : MonoBehaviour
 {
 
     public float damage = 10f;
-    public float range = 100f;
+    public float range = 999999999999999999;
     public ParticleSystem muzzleflash;
     public ParticleSystem death;
     public Text scoreText;
-
+    public AudioClip shotSound, explosionSound;
+    private float shootTimer = 0f;
     private int score = 0;
     //public ParticleSystem muzzleflash1;
 
@@ -19,10 +20,13 @@ public class Gun : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetButtonDown("Fire1"))
+        if (Input.GetButtonDown("Fire1") && shootTimer < Time.time)
         {
             Shoot();
+            AudioSource.PlayClipAtPoint(shotSound, transform.position);
+            shootTimer = Time.time + 2;
         }
+        
     }
 
     void Shoot()
@@ -39,6 +43,7 @@ public class Gun : MonoBehaviour
                 death.time = 0;
                 death.Play(withChildren:true);
                 Destroy(hit.transform.parent.gameObject);
+                AudioSource.PlayClipAtPoint(explosionSound, transform.position);
                 score++;
                 scoreText.text = score.ToString();
             }

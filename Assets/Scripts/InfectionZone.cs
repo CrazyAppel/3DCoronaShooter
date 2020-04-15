@@ -8,6 +8,7 @@ public class InfectionZone : MonoBehaviour
     SphereCollider myColliderInfectionZone;
     //Vector3 particleRotation = new Vector3(0, 0, 90);
     public float infectionRadiusSpeed = 0.075f;
+    public AudioClip infectionSound;
     public ParticleSystem zone;
     // Start is called before the first frame update
     void Start()
@@ -21,6 +22,7 @@ public class InfectionZone : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        
         //var x = zone.shape;
         //x.radius += infectionRadiusSpeed;
         myColliderInfectionZone.radius += infectionRadiusSpeed*Time.deltaTime;
@@ -36,6 +38,7 @@ public class InfectionZone : MonoBehaviour
         if (col.name == "Chinawoman")
         {
             Debug.Log("INSIDE");
+            AudioSource.PlayClipAtPoint(infectionSound, transform.position);
         }
     }
 
